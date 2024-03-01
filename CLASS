@@ -1,0 +1,33 @@
+//BOHDAN
+using System;
+
+namespace groupProjjj
+{
+    public class AIError
+    {
+        public int ErrorId { get; set; }
+        public string ErrorMessage { get; set; }
+        public string ErrorType { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string Details { get; set; } 
+
+        
+        public AIError(int errorId, string errorMessage, string errorType, DateTime timestamp, string details)
+        {
+            ErrorId = errorId;
+            ErrorMessage = errorMessage;
+            ErrorType = errorType;
+            Timestamp = timestamp; 
+            Details = details;
+        }
+
+        public override string ToString()
+        {
+            return $"Error ID: {ErrorId}\n" +
+                   $"Timestamp: {Timestamp}\n" +
+                   $"Error Type: {ErrorType}\n" +
+                   $"Error Message: {ErrorMessage}\n" +
+                   $"Details: {Details}";
+        }
+    }
+}
